@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Day1
+public class P1
 {
     public static int countSubstrings(String s) 
     {
