@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class P3 {
     public static int maxPerimeterTriangle(ArrayList<Integer> arr, int n) {
         // Sort the array in non-decreasing order
         Collections.sort(arr);
