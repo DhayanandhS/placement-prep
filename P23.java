@@ -1,4 +1,4 @@
-public class Solution 
+public class P23 
 {
 	public static String reverseString(String str) 
 	{
