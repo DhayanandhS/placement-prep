@@ -1,4 +1,4 @@
-class Solution {
+class P36 {
     public List<String> fizzBuzz(int n) {
         List<String> ans = new ArrayList<>();
         for(int i = 1; i <= n; i++){
