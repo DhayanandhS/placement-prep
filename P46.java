@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 class P46 {
 
@@ -6,37 +6,24 @@ class P46 {
         Scanner sc = new Scanner(System.in);
 
         String s;
-        s = sc.next(); // getting string i/p
+        s = sc.next(); // getting string input
 
-        //precompute:
-        int[] hash = new int[26];
+        // Precompute character frequencies:
+        int[] hash = new int[256]; // Using size 256 to accommodate all ASCII characters
         for (int i = 0; i < s.length(); i++) {
-            hash[s.charAt(i) - 'a']++;  // this line will directly add the count to the mapped hash index
+            hash[s.charAt(i)]++;  // This line increments the count at the ASCII index
         }
 
         int q;
         q = sc.nextInt();
         while (q-- > 0) {
             char c;
-            c = sc.next().charAt(0); // refer notes
-            // fetch:
-            System.out.println(hash[c - 'a']);
+            c = sc.next().charAt(0); // Get the first character of the input query
+            // Fetch and print the precomputed frequency:
+            System.out.println(hash[c]); // Access the corresponding ASCII index directly
         }
-
-
-        // this will run efficient with mapping the char in bigger sized array
-        int[] hashh = new int[26];
-        for (int i = 0; i < s.length(); i++) {
-            hash[s.charAt(i)]++;  // this line will directly add the count to the mapped hash index
-        }
-
-        int qq;
-        qq = sc.nextInt();
-        while (qq-- > 0) {
-            char c;
-            c = sc.next().charAt(0); // refer notes
-            // fetch:
-            System.out.println(hashh[c]);
-        }
+        
+        sc.close();
     }
 }
+
